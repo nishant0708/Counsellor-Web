@@ -49,8 +49,7 @@ console.log(userData)
       const userData = await fetchUserData(localStorage.getItem("userUid"));
     
       setUserData(userData);
-      setName((userData.firstname+" "+userData.surname) || "Alex Foam");
-     setDob(userData.dob || "2000-01-21");
+     
     };
 
     fetchData();
@@ -160,6 +159,8 @@ console.log(userData)
     setResumeFile(null);
     localStorage.removeItem("resumeFile");
   };
+  setName((userData.firstname+" "+userData.surname) || "Alex Foam");
+  setDob(userData.dob || "2000-01-21");
 
   return (
     <div className="profile-card-container">
